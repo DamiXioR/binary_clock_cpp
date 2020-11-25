@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-TEST(RandomTest, ShouldWorkWellToo)
+TEST(RandomTest, ShouldWork)
 {
     EXPECT_EQ(1, 1);
 }

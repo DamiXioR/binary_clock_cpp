@@ -39,11 +39,13 @@ endif()
 # Now simply link against gtest or gtest_main as needed. Eg
 
 set(LIBS_SRC
+    libs/BinaryFromDecimalConverter.cpp
     libs/BinaryClock.cpp
 )
 
 set(TESTS_SRC
     tests/gtest_main.cpp
+    tests/BinaryFromDecimalConverter-ut.cpp
     tests/BinaryClock-ut.cpp
 )
 
