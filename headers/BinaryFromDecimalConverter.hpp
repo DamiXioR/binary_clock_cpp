@@ -1,6 +1,8 @@
 #pragma once
+#include <cstdint>
+#include <vector>
 
 class BinaryFromDecimalConverter {
 public:
-    BinaryFromDecimalConverter() = default;
+    std::vector<bool> operator()(unsigned decimalLiteral);
 };
