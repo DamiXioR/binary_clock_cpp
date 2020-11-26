@@ -42,6 +42,7 @@ set(LIBS_SRC
     libs/BinaryFromDecimalConverter.cpp
     libs/BinaryClock.cpp
     libs/ClockScreen.cpp
+    libs/TimeParser.cpp
 )
 
 set(TESTS_SRC
@@ -49,6 +50,7 @@ set(TESTS_SRC
     tests/BinaryFromDecimalConverter-ut.cpp
     tests/BinaryClock-ut.cpp
     tests/ClockScreen-ut.cpp
+    tests/TimeParser-ut.cpp
 )
 
 set(MAIN_FILE
