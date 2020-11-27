@@ -5,12 +5,7 @@
 
 class TimeParserStub {
 public:
-    TimeParserStub(std::string currentDateAndTime)
-        : currentDateAndTime_(currentDateAndTime)
-    {
-        extractTimeFromExpression();
-        setTimeValuesFromExtractedTime();
-    }
+    explicit TimeParserStub(std::string currentDateAndTime) noexcept;
 
     uint8_t getHours() const;
     uint8_t getMinutes() const;
@@ -28,6 +23,13 @@ private:
     void extractTimeFromExpression();
     void setTimeValuesFromExtractedTime();
 };
+
+TimeParserStub::TimeParserStub(std::string currentDateAndTime) noexcept
+    : currentDateAndTime_(currentDateAndTime)
+{
+    extractTimeFromExpression();
+    setTimeValuesFromExtractedTime();
+}
 
 std::string TimeParserStub::getExtractedTime() const
 {

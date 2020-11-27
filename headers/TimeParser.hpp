@@ -5,7 +5,7 @@
 
 class TimeParser {
 public:
-    TimeParser(std::time_t& currentDateAndTime);
+    explicit TimeParser(std::time_t& currentDateAndTime) noexcept;
     uint8_t getHours() const;
     uint8_t getMinutes() const;
     uint8_t getSeconds() const;

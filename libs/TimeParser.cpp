@@ -2,7 +2,7 @@
 #include <ctime>
 #include <iostream>
 
-TimeParser::TimeParser(std::time_t& currentTime)
+TimeParser::TimeParser(std::time_t& currentTime) noexcept
     : currentDateAndTime_(std::ctime(&currentTime))
 {
     extractTimeFromExpression();
