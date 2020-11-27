@@ -3,6 +3,8 @@
 #include <ctime>
 #include "TimeUnits.hpp"
 
+inline TimeUnits timeUnits{};
+
 class TimeParser {
 public:
     unsigned getHours() const;

@@ -5,5 +5,3 @@ struct TimeUnits {
     unsigned minutes_{};
     unsigned seconds_{};
 };
-
-inline TimeUnits timeUnits{};
