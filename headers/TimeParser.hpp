@@ -1,15 +1,7 @@
 #pragma once
-#include <cstdint>
+
 #include <ctime>
-#include <string>
-
-struct tUnits {
-    unsigned hours_{};
-    unsigned minutes_{};
-    unsigned seconds_{};
-};
-
-inline tUnits timeUnits;
+#include "TimeUnits.hpp"
 
 class TimeParser {
 public:
