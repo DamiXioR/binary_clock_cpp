@@ -1,5 +1,6 @@
 #pragma once
 #include <TimeParser.hpp>
+#include <ClockScreen.hpp>
 #include <cstdint>
 #include <ctime>
 
@@ -9,4 +10,5 @@ public:
 
 private:
     TimeParser* timeParser_{};
+    ClockScreen* clockScreen_{};
 };

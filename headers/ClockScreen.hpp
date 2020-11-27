@@ -2,5 +2,5 @@
 
 class ClockScreen {
 public:
-    ClockScreen() = default;
+    void showScreen() const;
 };
