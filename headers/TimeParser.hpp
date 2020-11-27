@@ -3,20 +3,21 @@
 #include <ctime>
 #include <string>
 
+struct tUnits {
+    unsigned hours_{};
+    unsigned minutes_{};
+    unsigned seconds_{};
+};
+
+inline tUnits timeUnits;
+
 class TimeParser {
 public:
-    explicit TimeParser(std::time_t& currentDateAndTime) noexcept;
-    uint8_t getHours() const;
-    uint8_t getMinutes() const;
-    uint8_t getSeconds() const;
+    unsigned getHours() const;
+    unsigned getMinutes() const;
+    unsigned getSeconds() const;
+    void extractTimeFromExpression();
 
 private:
-    std::string currentDateAndTime_{};
-    std::string extractedTime_{};
-    uint8_t hours_{};
-    uint8_t minutes_{};
-    uint8_t seconds_{};
-
-    void extractTimeFromExpression();
-    void setTimeValuesFromExtractedTime();
+    std::tm* everyTimeUnitHolder_{};
 };

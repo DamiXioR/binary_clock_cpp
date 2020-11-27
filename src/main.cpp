@@ -5,14 +5,18 @@
 
 int main()
 {
-    BinaryFromDecimalConverter converter{};
+    /*BinaryFromDecimalConverter converter{};
 
     std::vector<bool> bits{};
     bits = converter(27);
-
+    
     for (const auto& el : bits) {
         std::cout << el << " ";
     }
+    */
+
+    BinaryClock bc;
+    bc.createTime();
 
     return 0;
 }

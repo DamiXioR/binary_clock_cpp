@@ -1,44 +1,26 @@
 #include <TimeParser.hpp>
-#include <ctime>
-#include <iostream>
 
-TimeParser::TimeParser(std::time_t& currentTime) noexcept
-    : currentDateAndTime_(std::ctime(&currentTime))
+unsigned TimeParser::getHours() const
 {
-    extractTimeFromExpression();
-}
-
-uint8_t TimeParser::getHours() const
-{
-    return hours_;
+    return timeUnits.hours_;
 };
-uint8_t TimeParser::getMinutes() const
+unsigned TimeParser::getMinutes() const
 {
-    return minutes_;
+    return timeUnits.minutes_;
 }
-uint8_t TimeParser::getSeconds() const
+unsigned TimeParser::getSeconds() const
 {
-    return seconds_;
+    return timeUnits.seconds_;
 }
 
 void TimeParser::extractTimeFromExpression()
 {
-    const int firstTimeLiteralPosition = 11;
-    const int lastTimeLiteralPosition = 8;
+    std::time_t currentTime;
+    std::time(&currentTime);
+    std::tm* everyTimeUnitHolder;
+    everyTimeUnitHolder = std::localtime(&currentTime);
 
-    extractedTime_ = currentDateAndTime_.substr(firstTimeLiteralPosition, lastTimeLiteralPosition);
-}
-
-void TimeParser::setTimeValuesFromExtractedTime()
-{
-    const int firstHoursLiteralPosition = 0;
-    const int lastHoursLiteralPosition = 2;
-    const int firstMinutesLiteralPosition = 3;
-    const int lastMinutesLiteralPosition = 5;
-    const int firstSecondsLiteralPosition = 6;
-    const int lastSecondsLiteralPosition = 8;
-
-    hours_ = std::stoi(extractedTime_.substr(firstHoursLiteralPosition, lastHoursLiteralPosition));
-    minutes_ = std::stoi(extractedTime_.substr(firstMinutesLiteralPosition, lastMinutesLiteralPosition));
-    seconds_ = std::stoi(extractedTime_.substr(firstSecondsLiteralPosition, lastSecondsLiteralPosition));
+    timeUnits.hours_ = everyTimeUnitHolder->tm_hour;
+    timeUnits.minutes_ = everyTimeUnitHolder->tm_min;
+    timeUnits.seconds_ = everyTimeUnitHolder->tm_sec;
 }
