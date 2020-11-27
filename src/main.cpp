@@ -6,7 +6,7 @@
 int main()
 {
     BinaryFromDecimalConverter converter{};
-    
+
     std::vector<bool> bits{};
     bits = converter(27);
 

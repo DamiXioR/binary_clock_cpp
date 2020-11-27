@@ -3,6 +3,5 @@
 class BinaryClock {
 public:
     BinaryClock() = default;
-    
 
 };
