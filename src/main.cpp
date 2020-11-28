@@ -1,5 +1,4 @@
 #include <BinaryClock.hpp>
-#include <BinaryFromDecimalConverter.hpp>
 
 #include <fcntl.h>
 #include <stdio.h>
