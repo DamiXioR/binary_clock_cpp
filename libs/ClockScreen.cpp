@@ -4,6 +4,12 @@
 
 void ClockScreen::showScreen(TimeParser* timeParser, BinaryTimeUnitsHolder* binaryTimeUnitsHolder) const
 {
+
+    std::cout << "BINARY CLOCK\n";
+    std::cout << "PRESS ANY KEY FOR BREAK\n";
+    std::cout << "*******************************\n";
+    std::cout << "*******************************\n";
+
     for (const auto& h : binaryTimeUnitsHolder->binaryHour_) {
         std::cout << h << " ";
     }
@@ -18,4 +24,6 @@ void ClockScreen::showScreen(TimeParser* timeParser, BinaryTimeUnitsHolder* bina
         std::cout << s << " ";
     }
     std::cout << "\n";
+    std::cout << "*******************************\n";
+    std::cout << "*******************************\n";
 }
