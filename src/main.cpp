@@ -5,15 +5,15 @@
 
 int main()
 {
-    /*BinaryFromDecimalConverter converter{};
+    BinaryFromDecimalConverter converter{};
 
     std::vector<bool> bits{};
-    bits = converter(27);
+    bits = converter(8);
     
     for (const auto& el : bits) {
-        std::cout << el << " ";
+        std::cout << el << "\n";
     }
-    */
+    std::cout << "\n";
 
     BinaryClock bc;
     bc.createTime();

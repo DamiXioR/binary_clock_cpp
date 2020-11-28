@@ -2,7 +2,9 @@
 
 std::vector<bool> BinaryFromDecimalConverter::operator()(unsigned decimalLiteral)
 {
+    const unsigned vectorSize = 4;
     std::vector<bool> bitsHandler{};
+    bitsHandler.reserve(vectorSize);
 
     unsigned firstBit = 1;
     const bool bitIsSet = true;
@@ -16,6 +18,10 @@ std::vector<bool> BinaryFromDecimalConverter::operator()(unsigned decimalLiteral
             bitsHandler.emplace_back(bitIsNotSet);
         }
         decimalLiteral = decimalLiteral >> firstBit;
+    }
+
+    while (bitsHandler.size() < vectorSize) {
+        bitsHandler.emplace_back();
     }
 
     return bitsHandler;
