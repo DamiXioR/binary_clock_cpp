@@ -4,8 +4,6 @@
 #include <BinaryTimeUnitsHolder.hpp>
 #include <ClockScreen.hpp>
 #include <TimeParser.hpp>
-#include <ctime>
-#include <vector>
 
 class BinaryClock {
 public:
