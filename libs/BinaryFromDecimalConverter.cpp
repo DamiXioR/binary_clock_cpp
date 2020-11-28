@@ -2,7 +2,7 @@
 
 std::vector<bool> BinaryFromDecimalConverter::operator()(unsigned decimalLiteral)
 {
-    const unsigned vectorSize = 4;
+    const unsigned vectorSize = 6;
     std::vector<bool> bitsHandler{};
     bitsHandler.reserve(vectorSize);
 
