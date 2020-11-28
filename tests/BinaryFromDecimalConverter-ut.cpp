@@ -14,7 +14,7 @@ public:
 
     // values are inserted in opposite order
 
-    const std::vector<bool> resultFromTestValue = {1, 1, 0, 1, 1};
+    const std::vector<bool> resultFromTestValue = {1, 1, 0, 1, 1, 0};
     const std::vector<bool> resultFromTestValue2 = {0, 0, 1, 0, 0, 1};
     const std::vector<bool> resultFromTestValue3 = {0, 1, 1, 1, 1, 1, 1, 1};
 };
