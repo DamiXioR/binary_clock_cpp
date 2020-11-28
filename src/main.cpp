@@ -8,8 +8,6 @@
 #include <chrono>
 #include <thread>
 
-#include <iostream>
-
 int kbhit(void)
 {
     struct termios oldt, newt;
