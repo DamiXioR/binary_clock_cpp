@@ -1,5 +1,13 @@
 #include <ClockScreen.hpp>
 
-void ClockScreen::showScreen() const {
-    
+#include <iostream>
+
+void ClockScreen::showScreen(TimeParser* timeParser) const
+{
+    std::cout << timeParser->getHours()
+              << " : "
+              << timeParser->getMinutes()
+              << " : "
+              << timeParser->getSeconds()
+              << "\n";
 }

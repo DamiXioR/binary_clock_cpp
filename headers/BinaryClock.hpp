@@ -1,7 +1,7 @@
 #pragma once
-#include <TimeParser.hpp>
+
 #include <ClockScreen.hpp>
-#include <cstdint>
+#include <TimeParser.hpp>
 #include <ctime>
 
 class BinaryClock {

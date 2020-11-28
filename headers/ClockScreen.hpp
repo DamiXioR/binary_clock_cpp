@@ -1,6 +1,8 @@
 #pragma once
 
+#include <TimeParser.hpp>
+
 class ClockScreen {
 public:
-    void showScreen() const;
+    void showScreen(TimeParser* timeParser) const;
 };
