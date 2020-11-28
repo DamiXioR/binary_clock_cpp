@@ -1,6 +1,5 @@
 #pragma once
 
-#include <BinaryFromDecimalConverter.hpp>
 #include <BinaryTimeUnitsHolder.hpp>
 #include <ClockScreen.hpp>
 #include <TimeParser.hpp>

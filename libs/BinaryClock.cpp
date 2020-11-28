@@ -1,4 +1,5 @@
 #include <BinaryClock.hpp>
+#include <BinaryFromDecimalConverter.hpp>
 
 void BinaryClock::createTime()
 {
